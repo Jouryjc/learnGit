@@ -3,10 +3,32 @@
 	<title>learn Git</title>
 </head>
 <body>
-<p>ADD A WORD</p>
-<p>ADD OTHER WORD</p>
-<p>A NEW BRANCH &&&</p>
-<p>A NEW BRANCH HAHAHA</p>
-<a>123123</a>
+	<script type="text/javascript">
+
+		function findMaxDuplicateChar(str) {  
+		  if(str.length == 1) {
+		    return str;
+		  }
+		  let charObj = {};
+		  for(let i=0;i<str.length;i++) {
+		    if(!charObj[str.charAt(i)]) {
+		      charObj[str.charAt(i)] = 1;
+		    }else{
+		      charObj[str.charAt(i)] += 1;
+		    }
+		  }
+		  
+		  let maxChar = '',
+		      maxValue = 1;
+		  for(var k in charObj) {
+		    if(charObj[k] >= maxValue) {
+		      maxChar = k;
+		      maxValue = charObj[k];
+		    }
+		  }
+		  console.log(maxChar) ;
+		}
+		findMaxDuplicateChar('afjghdfraaaasdenas');
+</script>
 </body>
 </html>
